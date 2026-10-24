@@ -98,8 +98,21 @@ h1 {
   margin-top: 0;
 }
 
-body:has(.projects) > h1 {
+h1.projects-title {
   font-size: 400%;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#profile-stats dt {
+  grid-row: 1;
+}
+
+#profile-stats dd {
+  grid-row: 2;
 }
 
 .projects {
