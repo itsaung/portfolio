@@ -115,6 +115,104 @@ h1.projects-title {
   grid-row: 2;
 }
 
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5em, 1fr));
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  gap: 0.25em 1em;
+  margin-block: 1.5em;
+}
+
+.stats dt {
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+#chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gridlines path {
+  stroke: none;
+}
+
+.gridlines line {
+  stroke-opacity: 0.35;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  margin: 0;
+  opacity: 0.7;
+}
+
+dl.info dd {
+  margin: 0;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 10;
+  padding: 0.75em 1em;
+  max-width: 22em;
+  background-color: canvas;
+  border-radius: 0.5em;
+  box-shadow: 0 0.4em 1.2em oklch(0% 0% 0 / 20%);
+  pointer-events: none;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: currentColor;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
