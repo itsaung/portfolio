@@ -270,3 +270,63 @@ body > section ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+#projects-pie-plot path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  flex: 1;
+  gap: 0.5em 1em;
+  margin-block: 2em;
+  padding: 1em;
+  border: 1px solid oklch(50% 10% 200 / 40%);
+  list-style: none;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.legend .swatch {
+  display: inline-block;
+  width: 0.75em;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--color);
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 24em;
+  margin-block: 1em;
+}
