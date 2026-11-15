@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikes on a Map",
+    "year": "2026",
+    "image": "images/bikes-on-a-map.png",
+    "description": "Interactive Mapbox map of Bluebikes traffic in Boston and Cambridge. Circle size is how busy a station is; color is whether people are mostly leaving or arriving.",
+    "url": "https://itsaung.github.io/bikes-on-a-map/"
+  },
+  {
     "title": "Lorem ipsum dolor sit",
     "year": "2023",
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",

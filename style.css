@@ -229,6 +229,10 @@ dl.info[hidden]:not(:hover, :focus-within) {
   margin: 0;
 }
 
+.projects h2 a {
+  color: inherit;
+}
+
 body > header {
   margin-bottom: 2em;
 }
